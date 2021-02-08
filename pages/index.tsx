@@ -6,6 +6,7 @@ const Home : React.FC = () => (
         <title>Teodor Tkaczyk</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Index</h1>
     </>
 )
 

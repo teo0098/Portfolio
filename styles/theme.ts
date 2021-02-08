@@ -1,12 +1,13 @@
-const Theme = {
+import ThemeInterface from '../interfaces/themeInterface'
+
+const Theme : ThemeInterface = {
     colors: {
-        light: '#FAFAFA',
+        light: '#F5F5F5',
+        dark: '#424242',
+        orange: '#FFD740'
     },
     heights: {
-        navigation: {
-            mobile: '60px',
-            tablet: '70px'
-        }
+        navigation: '90px'
     },
     media: {
         laptop: '@media (min-width: 1200px)',
