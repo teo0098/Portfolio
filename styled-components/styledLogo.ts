@@ -1,4 +1,5 @@
 import styled, { StyledComponent } from 'styled-components'
+
 import ThemeInterface from '../interfaces/themeInterface'
 
 export const StyledSection : StyledComponent<"section", any> = styled.section`
