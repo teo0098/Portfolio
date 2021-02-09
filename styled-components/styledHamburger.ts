@@ -25,11 +25,14 @@ export const StyledCircle : StyledComponent<"div", any, StyledCircleProps> = sty
     width: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? `200%` : `${theme.heights.navigation}`};
     height: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? '120vh' : `calc(${theme.heights.navigation} + 30px)`};
     clip-path: ellipse(100% 100% at 100% 0%);
-    background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.orange};
     transition: all 500ms ease-out;
     transition-delay: ${({ menu }) => menu ? '0' : '700ms'};
     display: flex;
     justify-content: flex-end;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        display: none;
+    }
 `
 
 interface StyledHamburgerDashProps extends StyledCircleProps { item : number }

@@ -26,7 +26,7 @@ const Hamburger : React.FC = () => {
                     )}
                 </AnimatePresence>
                 <SC.StyledMenuWrapper>
-                    <Menu menu={menu} setMenu={setMenu} />
+                    <Menu mobile menu={menu} setMenu={setMenu} />
                 </SC.StyledMenuWrapper>
             </SC.StyledWrapper>
         </SC.StyledCircle>
