@@ -1,4 +1,4 @@
-export const logoVariants = {
+const logoVariants = {
     hidden: {
         opacity: 0,
         transition: {
@@ -15,3 +15,5 @@ export const logoVariants = {
         }
     }
 }
+
+export default logoVariants

@@ -11,6 +11,8 @@ export const MyApp : React.FC<{ Component : React.FC, pageProps : any }> = ({ Co
       <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Kalam&display=swap" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={Theme}>
         <GlobalStyles />

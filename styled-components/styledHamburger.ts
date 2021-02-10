@@ -87,6 +87,7 @@ export const StyledLogoWrapper = styled(motion.div)`
 export const StyledMenuWrapper = styled.div`
     position: absolute;
     top: ${({ theme } : { theme : ThemeInterface }) => `calc(${theme.heights.navigation} + 30px)`};
+    padding-bottom: 10px;
     left: 0;
     width: 100%;
 `

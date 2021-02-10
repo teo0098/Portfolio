@@ -1,10 +1,10 @@
 import { AnimatePresence } from 'framer-motion'
 
 import MenuInterface from '../../../interfaces/menuInterface'
-import * as SC from '../../../styled-components/StyledMenu'
+import * as SC from '../../../styled-components/styledMenu'
 import { ulVariant, liVariant } from './animationVariants'
 
-const links : Array<string> = ['Home', 'Aptitudes', 'Projects', 'Contact']
+const links : Array<string> = ['Home', 'Abilities', 'Projects', 'Contact']
 
 const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
 
@@ -12,7 +12,7 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
         <nav>
             <AnimatePresence>
                 {menu && (
-                    <SC.StyledUL variants={ulVariant} initial='hidden' animate='visible' exit='hidden'>
+                    <SC.StyledUL key='ul' variants={ulVariant} initial='hidden' animate='visible' exit='hidden'>
                         {links.map(link => (
                             <SC.StyledLI key={link} variants={liVariant} onClick={() => alert(10)}> {link} </SC.StyledLI>
                         ))}

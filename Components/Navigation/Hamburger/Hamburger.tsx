@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 
 import * as SC from '../../../styled-components/styledHamburger'
 import Logo from '../Logo/Logo'
-import { logoVariants } from './animationVariants'
+import logoVariants from './animationVariants'
 import Menu from '../Menu/Menu'
 
 const Hamburger : React.FC = () => {
@@ -20,7 +20,7 @@ const Hamburger : React.FC = () => {
             <SC.StyledWrapper>
                 <AnimatePresence>
                     {menu && (
-                        <SC.StyledLogoWrapper variants={logoVariants} initial='hidden' animate='visible' exit='hidden'>
+                        <SC.StyledLogoWrapper key='menu' variants={logoVariants} initial='hidden' animate='visible' exit='hidden'>
                             <Logo />
                         </SC.StyledLogoWrapper>
                     )}

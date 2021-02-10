@@ -19,6 +19,7 @@ export const StyledLI = styled(motion.li)`
     color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
     font-size: 30px;
     font-weight: 700;
+    cursor: pointer;
 
     ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
         font-size: 17px;
