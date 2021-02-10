@@ -3,7 +3,7 @@ import styled, { StyledComponent } from 'styled-components'
 import ThemeInterface from '../interfaces/themeInterface'
 
 export const StyledAbilities : StyledComponent<"div", any> = styled.div`
-    padding: 20px 10px;
+    padding: 30px 10px;
     position: relative;
 
     ::after {
@@ -21,9 +21,27 @@ export const StyledAbilities : StyledComponent<"div", any> = styled.div`
 `
 
 export const StyledUL : StyledComponent<"ul", any> = styled.ul`
-
+    list-style-type: none;
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
 `
 
 export const StyledLI : StyledComponent<"li", any> = styled.li`
-    
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 10px;
+    align-items: center;
+`
+
+export const StyledSpan : StyledComponent<"span", any> = styled.span`
+    order: 2;
+    font-weight: 600;
+    font-size: 18px;
+    color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
+`
+
+export const StyledSVG : StyledComponent<"div", any> = styled.div`
+    order: 1;
 `
