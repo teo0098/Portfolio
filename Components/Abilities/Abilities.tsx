@@ -1,5 +1,3 @@
-import Fade from 'react-reveal/Fade'
-
 import * as SC from '../../styled-components/styledAbilities'
 import Desc from '../Desc/Desc'
 import HTML from '../../assets/html-5.svg'
@@ -29,12 +27,10 @@ import AbilityAnimation from './AbilityAnimation/AbilityAnimation'
 
 const Abilities : React.FC = () => (
     <SC.StyledAbilities>
-        <Fade left fraction={0.8}>
-            <Desc heading='Abilities'>
-                Abilities listed below have taken me some time to assimilate and to be honest I'm still learning and practising them.
-                These abilities have been learnt during making my own projects or performing some programming assignments. 
-            </Desc>
-        </Fade>
+        <Desc heading='Abilities'>
+            Abilities listed below have taken me some time to assimilate and to be honest I'm still learning and practising them.
+            These abilities have been learnt during making my own projects or performing some programming assignments. 
+        </Desc>
         <SC.StyledUL>
             <AbilityAnimation>
                 <SC.StyledLI> <SC.StyledSpan> HTML 5 </SC.StyledSpan> <SC.StyledSVG> <HTML /> </SC.StyledSVG> </SC.StyledLI>

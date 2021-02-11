@@ -22,6 +22,8 @@ import SUCCESS from '../../assets/success.svg'
 import GIT from '../../assets/git-icon.svg'
 import ProjectInterface from '../../interfaces/projectInterface'
 
+const iconsSize = '50px', successSize = '25px'
+
 const projectsData : Array<ProjectInterface> = [
     {
         imageSrc: '/e-commerce.jpg',
@@ -30,75 +32,93 @@ const projectsData : Array<ProjectInterface> = [
         technologies: [
             {
                 name: 'HTML 5',
-                icon: <HTML />
+                icon: <HTML />,
+                size: iconsSize
             },
             {
                 name: 'CSS 3',
-                icon: <CSS />
+                icon: <CSS />,
+                size: iconsSize
             },
             {
                 name: 'SASS/SCSS',
-                icon: <SASS />
+                icon: <SASS />,
+                size: iconsSize
             },
             {
                 name: 'React',
-                icon: <REACT />
+                icon: <REACT />,
+                size: iconsSize
             },
             {
                 name: 'Redux',
-                icon: <REDUX />
+                icon: <REDUX />,
+                size: iconsSize
             },
             {
                 name: 'MySQL',
-                icon: <MYSQL />
+                icon: <MYSQL />,
+                size: iconsSize
             },
             {
                 name: 'PHP',
-                icon: <PHP />
+                icon: <PHP />,
+                size: iconsSize
             },
             {
                 name: 'Json Web Tokens',
-                icon: <JWT />
+                icon: <JWT />,
+                size: iconsSize
             },
             {
                 name: 'React Spring',
-                icon: <REACT_SPRING />
+                icon: <REACT_SPRING />,
+                size: iconsSize
             },
             {
                 name: 'Material UI',
-                icon: <MATERIAL_UI />
+                icon: <MATERIAL_UI />,
+                size: iconsSize
             },
             {
                 name: 'Git',
-                icon: <GIT />
+                icon: <GIT />,
+                size: iconsSize
             },
             {
                 name: 'SCSS Modules',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'BEM',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Redux Persist',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Redux Thunk',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Axios',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Recaptcha',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'React Hook Form',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             }
         ],
         previewUrl: 'https://teo-games-shop.herokuapp.com/',
@@ -111,79 +131,98 @@ const projectsData : Array<ProjectInterface> = [
         technologies: [
             {
                 name: 'HTML 5',
-                icon: <HTML />
+                icon: <HTML />,
+                size: iconsSize
             },
             {
                 name: 'CSS 3',
-                icon: <CSS />
+                icon: <CSS />,
+                size: iconsSize
             },
             {
                 name: 'SASS/SCSS',
-                icon: <SASS />
+                icon: <SASS />,
+                size: iconsSize
             },
             {
                 name: 'React',
-                icon: <REACT />
+                icon: <REACT />,
+                size: iconsSize
             },
             {
                 name: 'Json Web Tokens',
-                icon: <JWT />
+                icon: <JWT />,
+                size: iconsSize
             },
             {
                 name: 'Framer Motion',
-                icon: <FRAMER_MOTION />
+                icon: <FRAMER_MOTION />,
+                size: iconsSize
             },
             {
                 name: 'Material UI',
-                icon: <MATERIAL_UI />
+                icon: <MATERIAL_UI />,
+                size: iconsSize
             },
             {
                 name: 'Node.js',
-                icon: <NODE />
+                icon: <NODE />,
+                size: iconsSize
             },
             {
                 name: 'Express.js',
-                icon: <EXPRESS />
+                icon: <EXPRESS />,
+                size: iconsSize
             },
             {
                 name: 'MongoDB',
-                icon: <MONGO />
+                icon: <MONGO />,
+                size: iconsSize
             },
             {
                 name: 'TypeScript',
-                icon: <TS />
+                icon: <TS />,
+                size: iconsSize
             },
             {
                 name: 'Apollo Client',
-                icon: <APOLLO />
+                icon: <APOLLO />,
+                size: iconsSize
             },
             {
                 name: 'GraphQL',
-                icon: <GRAPHQL />
+                icon: <GRAPHQL />,
+                size: iconsSize
             },
             {
                 name: 'Git',
-                icon: <GIT />
+                icon: <GIT />,
+                size: iconsSize
             },
             {
                 name: 'SCSS Modules',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'BEM',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Mobile First Design',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Final Form',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Mongoose',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             }
         ],
         previewUrl: 'https://teo-planterium.herokuapp.com/',
@@ -196,87 +235,103 @@ const projectsData : Array<ProjectInterface> = [
         technologies: [
             {
                 name: 'HTML 5',
-                icon: <HTML />
+                icon: <HTML />,
+                size: iconsSize
             },
             {
                 name: 'CSS 3',
-                icon: <CSS />
+                icon: <CSS />,
+                size: iconsSize
             },
             {
                 name: 'Styled Components',
-                icon: <STYLED_COMPONENTS />
+                icon: <STYLED_COMPONENTS />,
+                size: iconsSize
             },
             {
                 name: 'Next.js',
-                icon: <NEXTJS />
+                icon: <NEXTJS />,
+                size: iconsSize
             },
             {
                 name: 'Redux',
-                icon: <REDUX />
+                icon: <REDUX />,
+                size: iconsSize
             },
             {
                 name: 'Json Web Tokens',
-                icon: <JWT />
+                icon: <JWT />,
+                size: iconsSize
             },
             {
                 name: 'Framer Motion',
-                icon: <FRAMER_MOTION />
+                icon: <FRAMER_MOTION />,
+                size: iconsSize
             },
             {
                 name: 'Material UI',
-                icon: <MATERIAL_UI />
+                icon: <MATERIAL_UI />,
+                size: iconsSize
             },
             {
                 name: 'Node.js',
-                icon: <NODE />
+                icon: <NODE />,
+                size: iconsSize
             },
             {
                 name: 'MongoDB',
-                icon: <MONGO />
+                icon: <MONGO />,
+                size: iconsSize
             },
             {
                 name: 'TypeScript',
-                icon: <TS />
+                icon: <TS />,
+                size: iconsSize
             },
             {
                 name: 'Cypress',
-                icon: <CYPRESS />
-            },
-            {
-                name: 'GraphQL',
-                icon: <GRAPHQL />
+                icon: <CYPRESS />,
+                size: iconsSize
             },
             {
                 name: 'Git',
-                icon: <GIT />
+                icon: <GIT />,
+                size: iconsSize
             },
             {
                 name: 'SCSS Modules',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'BEM',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Mobile First Design',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Final Form',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Redux Persist',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'Axios',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             },
             {
                 name: 'REST API',
-                icon: <SUCCESS />
+                icon: <SUCCESS />,
+                size: successSize
             }
         ],
         previewUrl: 'https://jobs-find.vercel.app/',

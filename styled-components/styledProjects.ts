@@ -28,6 +28,6 @@ export const StyledA : StyledComponent<"a", any> = styled.a`
 
 export const StyledProjectsWrapper : StyledComponent<"div", any> = styled.div`
     display: grid;
-    row-gap: 20px;
+    row-gap: 30px;
     margin-top: 30px;
 `
