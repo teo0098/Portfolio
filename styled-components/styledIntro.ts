@@ -9,7 +9,7 @@ export const StyledIntro : StyledComponent<"section", any> = styled.section`
     display: grid;
     align-content: center;
     justify-content: center;
-    gap: 20px;
+    row-gap: 20px;
     padding: 20px;
 
     ::after {

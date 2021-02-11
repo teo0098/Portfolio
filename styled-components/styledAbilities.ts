@@ -24,14 +24,14 @@ export const StyledUL : StyledComponent<"ul", any> = styled.ul`
     list-style-type: none;
     margin-top: 40px;
     display: grid;
-    gap: 20px;
+    row-gap: 20px;
     justify-content: center;
 `
 
 export const StyledLI : StyledComponent<"li", any> = styled.li`
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    gap: 10px;
+    column-gap: 10px;
     align-items: center;
 `
 
