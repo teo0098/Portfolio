@@ -25,7 +25,7 @@ export const StyledDesc : StyledComponent<"p", any> = styled.p`
 `
 
 export const StyledTechnologies : StyledComponent<"ul", any> = styled.ul`
-    
+    list-style-type: none;
 `
 interface StyledTechnologyProps { size : string }
 
@@ -45,12 +45,21 @@ export const StyledTechnology : StyledComponent<"li", any, StyledTechnologyProps
 
 export const StyledSpan : StyledComponent<"span", any> = styled.span`
     font-weight: 600;
+    font-size: 18px;
 `
 
 export const StyledButton : StyledComponent<"button", any> = styled.button`
-
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    border: ${({ theme } : { theme : ThemeInterface }) => `2px solid ${theme.colors.dark}`};
+    background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.light};
+    box-shadow: 0 8px 6px -6px black;
+    font-size: 17px;
 `
 
 export const StyledButtons : StyledComponent<"div", any> = styled.div`
-
+    display: grid;
+    row-gap: 10px;
 `

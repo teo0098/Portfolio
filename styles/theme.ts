@@ -5,7 +5,7 @@ const Theme : ThemeInterface = {
         light: '#F5F5F5',
         dark: '#424242',
         darkTransparent: 'rgba(66,66,66,0.5)',
-        orange: '#FFD740'
+        orange: '#FFEE58'
     },
     fonts: {
         kalam: "'Kalam', cursive",
