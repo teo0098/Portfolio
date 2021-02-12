@@ -9,14 +9,18 @@
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
+    "final-form": "^4.20.1",
+    "final-form-focus": "^1.1.2",
     "framer-motion": "^3.3.0",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-final-form": "^6.5.2",
     "react-reveal": "^1.2.2",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@types/final-form-focus": "^1.1.1",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
     "@types/styled-components": "^5.1.7",

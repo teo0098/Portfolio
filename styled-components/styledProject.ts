@@ -53,7 +53,7 @@ export const StyledButton : StyledComponent<"button", any> = styled.button`
     padding: 10px;
     text-align: center;
     font-weight: 700;
-    border: ${({ theme } : { theme : ThemeInterface }) => `2px solid ${theme.colors.dark}`};
+    border: ${({ theme } : { theme : ThemeInterface }) => `1px solid ${theme.colors.dark}`};
     background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.light};
     box-shadow: 0 8px 6px -6px black;
     font-size: 17px;
