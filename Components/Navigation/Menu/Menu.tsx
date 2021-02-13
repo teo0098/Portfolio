@@ -1,4 +1,5 @@
 import { AnimatePresence } from 'framer-motion'
+import { Link } from 'react-scroll'
 
 import MenuInterface from '../../../interfaces/menuInterface'
 import * as SC from '../../../styled-components/styledMenu'
@@ -14,7 +15,16 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
                 {menu && (
                     <SC.StyledUL key='ul' variants={ulVariant} initial='hidden' animate='visible' exit='hidden'>
                         {links.map(link => (
-                            <SC.StyledLI key={link} variants={liVariant} onClick={() => alert(10)}> {link} </SC.StyledLI>
+                            <Link
+                                key={link}
+                                to={link}
+                                spy={true}
+                                smooth={true}
+                                offset={-90}
+                                delay={1200}
+                                duration={1000}>
+                                <SC.StyledLI variants={liVariant} onClick={() => setMenu ? setMenu(false) : null}> {link} </SC.StyledLI>
+                            </Link>
                         ))}
                     </SC.StyledUL>
                 )}
@@ -26,7 +36,15 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
         <nav>
             <SC.StyledUL>
                 {links.map(link => (
-                    <SC.StyledLI key={link} onClick={() => alert(10)}> {link} </SC.StyledLI>
+                    <Link
+                        key={link}
+                        to={link}
+                        spy={true}
+                        smooth={true}
+                        offset={-90}
+                        duration={1000}>
+                        <SC.StyledLI> {link} </SC.StyledLI>
+                    </Link>
                 ))}
             </SC.StyledUL>
         </nav>

@@ -26,7 +26,7 @@ import GIT from '../../assets/git-icon.svg'
 import AbilityAnimation from './AbilityAnimation/AbilityAnimation'
 
 const Abilities : React.FC = () => (
-    <SC.StyledAbilities>
+    <SC.StyledAbilities id='Abilities'>
         <Desc heading='Abilities'>
             Abilities listed below have taken me some time to assimilate and to be honest I'm still learning and practising them.
             These abilities have been learnt during making my own projects or performing some programming assignments. 

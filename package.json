@@ -17,12 +17,14 @@
     "react-dom": "17.0.1",
     "react-final-form": "^6.5.2",
     "react-reveal": "^1.2.2",
+    "react-scroll": "^1.8.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@types/final-form-focus": "^1.1.1",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
+    "@types/react-scroll": "^1.8.2",
     "@types/styled-components": "^5.1.7",
     "babel-plugin-styled-components": "^1.12.0",
     "typescript": "^4.1.3"

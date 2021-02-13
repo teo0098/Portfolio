@@ -1,9 +1,12 @@
 export default interface ThemeInterface {
     colors: {
         light: string;
+        darkerLight: string;
         dark: string;
         darkTransparent: string;
         orange: string;
+        success: string;
+        error: string;
     };
     fonts: {
         kalam: string;
