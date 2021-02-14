@@ -18,7 +18,8 @@
     "react-final-form": "^6.5.2",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.8.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "validator": "^13.5.2"
   },
   "devDependencies": {
     "@types/final-form-focus": "^1.1.1",
@@ -26,6 +27,7 @@
     "@types/react": "^17.0.1",
     "@types/react-scroll": "^1.8.2",
     "@types/styled-components": "^5.1.7",
+    "@types/validator": "^13.1.3",
     "babel-plugin-styled-components": "^1.12.0",
     "typescript": "^4.1.3"
   }
