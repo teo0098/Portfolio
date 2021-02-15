@@ -1,4 +1,5 @@
 import styled, { StyledComponent, css } from 'styled-components'
+import { Link } from 'react-scroll'
 
 import ThemeInterface from '../interfaces/themeInterface'
 
@@ -42,4 +43,9 @@ export const StyledP : StyledComponent<"p", any> = styled.p`
     ${sharedStyles};
     font-size: 40px;
     font-weight: 600;
+`
+
+export const StyledScrollLink = styled(Link)`
+    display: block;
+    margin: 0 auto;
 `

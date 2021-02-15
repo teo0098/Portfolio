@@ -33,7 +33,7 @@ const sharedStyles = css<InputDataProps>`
     border-radius: 5px;
     border: ${({ success, error }) => renderColor(success, error)};
     background-color: ${({ theme } : {theme : ThemeInterface}) => theme.colors.darkerLight};
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     transition: all 150ms ease-out;
 
@@ -54,5 +54,30 @@ export const StyledTextarea : StyledComponent<"textarea", any, InputDataProps> =
 
 export const StyledLabel : StyledComponent<"label", any, InputDataProps> = styled.label<InputDataProps>`
     font-family: ${({ theme } : { theme : ThemeInterface }) => theme.fonts.balsam};
-    font-size: 16px;
+    font-size: 17px;
+`
+
+interface StyledInfoProps { success ?: boolean, error ?: boolean }
+
+const renderInfoBGColor = (success ?: boolean, error ?: boolean) => {
+    if (success) return Theme.colors.success
+    if (error) return Theme.colors.error
+    return Theme.colors.dark
+}
+
+export const StyledInfo : StyledComponent<"div", any, StyledInfoProps> = styled.div<StyledInfoProps>`
+    background-color: ${({ success, error }) => renderInfoBGColor(success, error)};
+    border-radius: 3px;
+    padding: 10px;
+`
+
+export const StyledP : StyledComponent<"p", any> = styled.p`
+    font-size: 18px;
+    font-weight: 500;
+`
+
+export const StyledRenderStatus : StyledComponent<'div', any> = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `

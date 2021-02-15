@@ -3,22 +3,18 @@ import ThemeInterface from '../interfaces/themeInterface';
 
 const GlobalStyles : GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle<any>`
 
-    /* width */
     ::-webkit-scrollbar {
         width: 10px;
     }
 
-    /* Track */
     ::-webkit-scrollbar-track {
         background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.light};
     }
     
-    /* Handle */
     ::-webkit-scrollbar-thumb {
         background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
     }
 
-    /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
     }

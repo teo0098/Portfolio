@@ -1,5 +1,4 @@
 import { AnimatePresence } from 'framer-motion'
-import { Link } from 'react-scroll'
 
 import MenuInterface from '../../../interfaces/menuInterface'
 import * as SC from '../../../styled-components/styledMenu'
@@ -15,16 +14,19 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
                 {menu && (
                     <SC.StyledUL key='ul' variants={ulVariant} initial='hidden' animate='visible' exit='hidden'>
                         {links.map(link => (
-                            <Link
-                                key={link}
-                                to={link}
-                                spy={true}
-                                smooth={true}
-                                offset={-90}
-                                delay={1200}
-                                duration={1000}>
-                                <SC.StyledLI variants={liVariant} onClick={() => setMenu ? setMenu(false) : null}> {link} </SC.StyledLI>
-                            </Link>
+                            <SC.StyledLI key={link} variants={liVariant}>
+                                <SC.StyledScrollLink
+                                    onClick={() => setMenu ? setMenu(false) : null}
+                                    activeClass='active'
+                                    to={link}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-90}
+                                    delay={1200}
+                                    duration={1000}>
+                                        {link}
+                                </SC.StyledScrollLink>
+                            </SC.StyledLI>
                         ))}
                     </SC.StyledUL>
                 )}
@@ -36,15 +38,17 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
         <nav>
             <SC.StyledUL>
                 {links.map(link => (
-                    <Link
-                        key={link}
-                        to={link}
-                        spy={true}
-                        smooth={true}
-                        offset={-90}
-                        duration={1000}>
-                        <SC.StyledLI> {link} </SC.StyledLI>
-                    </Link>
+                    <SC.StyledLI key={link}>
+                         <SC.StyledScrollLink
+                            activeClass='active'
+                            to={link}
+                            spy={true}
+                            smooth={true}
+                            offset={-90}
+                            duration={1000}>
+                                {link}
+                        </SC.StyledScrollLink>
+                    </SC.StyledLI>
                 ))}
             </SC.StyledUL>
         </nav>
