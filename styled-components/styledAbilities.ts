@@ -18,6 +18,11 @@ export const StyledAbilities : StyledComponent<"div", any> = styled.div`
         border-color: ${({ theme } : { theme : ThemeInterface }) => `transparent ${theme.colors.orange} transparent transparent`};
         z-index: -2;
     }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        display: flex;
+        align-items: flex-start
+    }
 `
 
 export const StyledUL : StyledComponent<"ul", any> = styled.ul`
@@ -26,6 +31,8 @@ export const StyledUL : StyledComponent<"ul", any> = styled.ul`
     display: grid;
     row-gap: 20px;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
 `
 
 export const StyledLI : StyledComponent<"li", any> = styled.li`
@@ -44,4 +51,24 @@ export const StyledSpan : StyledComponent<"span", any> = styled.span`
 
 export const StyledSVG : StyledComponent<"div", any> = styled.div`
     order: 1;
+`
+
+export const StyledAbilitiesWrapper : StyledComponent<"div", any> = styled.div`
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
+        padding: 0 80px;
+    }
+`
+
+export const StyledSVGCharacter : StyledComponent<"div", any> = styled.div`
+    display: none;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
+        display: block;
+        margin-top: 20px;
+
+        & > * {
+            width: 300px;
+            height: 100%;
+        }
+    }
 `
