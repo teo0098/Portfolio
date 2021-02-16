@@ -20,8 +20,18 @@ export const StyledAbilities : StyledComponent<"div", any> = styled.div`
     }
 
     ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        padding: 30px 20px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        padding: 30px 30px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
         display: flex;
-        align-items: flex-start
+        align-items: flex-start;
+        padding: 30px 50px;
+        justify-content: space-between;
     }
 `
 
@@ -56,6 +66,7 @@ export const StyledSVG : StyledComponent<"div", any> = styled.div`
 export const StyledAbilitiesWrapper : StyledComponent<"div", any> = styled.div`
     ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
         padding: 0 80px;
+        width: 75%;
     }
 `
 
@@ -64,7 +75,6 @@ export const StyledSVGCharacter : StyledComponent<"div", any> = styled.div`
 
     ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
         display: block;
-        margin-top: 20px;
 
         & > * {
             width: 300px;

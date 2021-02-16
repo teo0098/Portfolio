@@ -19,6 +19,18 @@ export const StyledProjects : StyledComponent<"div", any> = styled.div`
         border-color: ${({ theme } : { theme : ThemeInterface }) => `transparent ${theme.colors.light} transparent transparent`};
         z-index: 1;
     }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        padding: 30px 20px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        padding: 30px 30px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
+        padding: 30px 50px;
+    }
 `
 
 export const StyledA : StyledComponent<"a", any> = styled.a`
@@ -28,6 +40,11 @@ export const StyledA : StyledComponent<"a", any> = styled.a`
 
 export const StyledProjectsWrapper : StyledComponent<"div", any> = styled.div`
     display: grid;
-    row-gap: 30px;
+    row-gap: 50px;
     margin-top: 30px;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        row-gap: 70px;
+        margin-top: 50px;
+    }
 `

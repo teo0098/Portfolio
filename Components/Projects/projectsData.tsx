@@ -27,6 +27,7 @@ const iconsSize = '50px', successSize = '25px'
 const projectsData : Array<ProjectInterface> = [
     {
         imageSrc: '/e-commerce.jpg',
+        smallImageSrc: '/e-commerce-small.jpg',
         heading: 'Games shop',
         desc: "Online shop which allows customers to purchase some games. The shop contains most features as other online shops. The website's layout was partially inspired and derived from gog.com.",
         technologies: [
@@ -126,6 +127,7 @@ const projectsData : Array<ProjectInterface> = [
     },
     {
         imageSrc: '/planterium.jpg',
+        smallImageSrc: '/planterium-small.jpg',
         heading: 'Planterium',
         desc: "App helping keen gardeners tracking their plants' irrigation. Apart from tracking plants' irrigation's rate, gardener can also see what was the time of the last irrigation of the plant and is capable to create his own custom plant and do more interesting things.",
         technologies: [
@@ -230,6 +232,7 @@ const projectsData : Array<ProjectInterface> = [
     },
     {
         imageSrc: '/jobs.jpg',
+        smallImageSrc: '/jobs-small.jpg',
         heading: 'Jobs.find',
         desc: "Website focused on helping users to find their dreamed-of job. One of the many features is that user is able to browse many jobs on the page and also browse jobs determined by filter criteria or by searching specific jobs. Website's layout was inspired from No Fluff Jobs' website.",
         technologies: [

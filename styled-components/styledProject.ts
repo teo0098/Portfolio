@@ -2,17 +2,38 @@ import styled, { StyledComponent } from 'styled-components'
 
 import ThemeInterface from '../interfaces/themeInterface'
 
-export const StyledProject : StyledComponent<"section", any> = styled.section`
+interface OrderProps { index ?: number }
+
+export const StyledProject : StyledComponent<"section", any, OrderProps> = styled.section<OrderProps>`
     color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
     display: grid;
     row-gap: 10px;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        row-gap: 30px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        display: flex;
+        flex-direction: ${({ index }) => index != undefined && index % 2 === 0 ? 'row' : 'row-reverse'};
+        justify-content: space-between;
+    }
 `
 
-export const StyledImg : StyledComponent<"img", any> = styled.img`
+export const StyledImg : StyledComponent<"img", any, OrderProps> = styled.img<OrderProps>`
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    display: none;
+    border-radius: 5px;
+    box-shadow: ${({ theme } : { theme : ThemeInterface }) => `20px 20px 12px -12px ${theme.colors.dark}`};
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        margin: 0 auto;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        box-shadow: ${({ index, theme } : { index ?: number, theme : ThemeInterface }) => index != undefined && index % 2 === 0 ? `20px 20px 12px -12px ${theme.colors.dark}` : `-20px 20px 12px -12px ${theme.colors.dark}`};
+    }
 ` 
 
 export const StyledH3 : StyledComponent<"h3", any> = styled.h3`
@@ -26,16 +47,24 @@ export const StyledDesc : StyledComponent<"p", any> = styled.p`
 
 export const StyledTechnologies : StyledComponent<"ul", any> = styled.ul`
     list-style-type: none;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    margin: 20px 0;
+    align-items: center;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        margin: 0;
+    }
+
 `
 interface StyledTechnologyProps { size : string }
 
 export const StyledTechnology : StyledComponent<"li", any, StyledTechnologyProps> = styled.li<StyledTechnologyProps>`
-
     display: grid;
     grid-template-columns: repeat(2, max-content);
     align-items: center;
     column-gap: 10px;
-    margin: 10px;
 
     & > *:nth-child(1) {
         width: ${({ size }) => size};
@@ -57,9 +86,39 @@ export const StyledButton : StyledComponent<"button", any> = styled.button`
     background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.light};
     box-shadow: 0 8px 6px -6px black;
     font-size: 17px;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        padding: 15px;
+    }
 `
 
 export const StyledButtons : StyledComponent<"div", any> = styled.div`
     display: grid;
     row-gap: 10px;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 10px;
+        justify-content: center;
+    }
+`
+
+export const StyledSection : StyledComponent<"section", any> = styled.section`
+    display: grid;
+    row-gap: 5px;
+`
+
+export const StyledInfoWrapper : StyledComponent<"div", any> = styled.div`
+    display: grid;
+    row-gap: 10px;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        row-gap: 30px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        width: 60%;
+        margin: 0 20px;
+    }
 `
