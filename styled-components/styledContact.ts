@@ -1,12 +1,16 @@
-import styled, { StyledComponent } from 'styled-components'
+import styled, { StyledComponent, css } from 'styled-components'
 
 import ThemeInterface from '../interfaces/themeInterface'
+
+const sharedStyles = css`
+    display: grid;
+    row-gap: 30px;
+`
 
 export const StyledContact : StyledComponent<"div", any> = styled.div`
     padding: 30px 10px;
     position: relative;
-    display: grid;
-    row-gap: 30px;
+    ${sharedStyles};
 
     ::after {
         content: '';
@@ -20,6 +24,18 @@ export const StyledContact : StyledComponent<"div", any> = styled.div`
         border-color: ${({ theme } : { theme : ThemeInterface }) => `transparent ${theme.colors.orange} transparent transparent`};
         z-index: 1;
     }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        padding: 30px 20px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        padding: 30px 30px;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.laptop} {
+        padding: 30px 50px;
+    }
 `
 
 interface StyledStatusProps { open : boolean, theme : ThemeInterface } 
@@ -32,7 +48,7 @@ export const StyledStatus : StyledComponent<"section", any, StyledStatusProps> =
     text-align: center;
 `
 
-export const StyledH4 : StyledComponent<"h4", any> = styled.h4`
+export const StyledH3 : StyledComponent<"h3", any> = styled.h3`
     font-size: 20px;
     font-weight: 500;
 `
@@ -46,7 +62,7 @@ export const StyledOtherContacts : StyledComponent<"ul", any> = styled.ul`
     list-style-type: none;
     color: ${({ theme } : {theme : ThemeInterface}) => theme.colors.dark};
     display: grid;
-    row-gap: 30px;
+    row-gap: 30px;    
 `
 
 export const StyledOtherContact : StyledComponent<"li", any> = styled.li`
@@ -74,4 +90,24 @@ export const StyledMessage : StyledComponent<"p", any> = styled.p`
 
 export const StyledAdditionalData : StyledComponent<"span", any> = styled.span`
     font-weight: 700;
+`
+
+export const StyledContactWrapper : StyledComponent<"div", any> = styled.div`
+    ${sharedStyles};
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        align-items: flex-start;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 20px;
+        justify-content: space-between;
+    }
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.desktop} {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+`
+
+export const StyledDiv : StyledComponent<"div", any> = styled.div`
+    ${sharedStyles};
 `

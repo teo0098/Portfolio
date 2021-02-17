@@ -37,7 +37,7 @@ export const StyledImg : StyledComponent<"img", any, OrderProps> = styled.img<Or
 ` 
 
 export const StyledH3 : StyledComponent<"h3", any> = styled.h3`
-    font-size: 25px;
+    font-size: 30px;
 `
 
 export const StyledDesc : StyledComponent<"p", any> = styled.p`
@@ -48,7 +48,7 @@ export const StyledDesc : StyledComponent<"p", any> = styled.p`
 export const StyledTechnologies : StyledComponent<"ul", any> = styled.ul`
     list-style-type: none;
     display: grid;
-    row-gap: 10px;
+    row-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     margin: 20px 0;
     align-items: center;
@@ -60,7 +60,7 @@ export const StyledTechnologies : StyledComponent<"ul", any> = styled.ul`
 `
 interface StyledTechnologyProps { size : string }
 
-export const StyledTechnology : StyledComponent<"li", any, StyledTechnologyProps> = styled.li<StyledTechnologyProps>`
+export const StyledTechnology : StyledComponent<"div", any, StyledTechnologyProps> = styled.div<StyledTechnologyProps>`
     display: grid;
     grid-template-columns: repeat(2, max-content);
     align-items: center;
@@ -106,7 +106,7 @@ export const StyledButtons : StyledComponent<"div", any> = styled.div`
 
 export const StyledSection : StyledComponent<"section", any> = styled.section`
     display: grid;
-    row-gap: 5px;
+    row-gap: 10px;
 `
 
 export const StyledInfoWrapper : StyledComponent<"div", any> = styled.div`

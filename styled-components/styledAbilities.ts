@@ -45,13 +45,6 @@ export const StyledUL : StyledComponent<"ul", any> = styled.ul`
     align-items: center;
 `
 
-export const StyledLI : StyledComponent<"li", any> = styled.li`
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 10px;
-    align-items: center;
-`
-
 export const StyledSpan : StyledComponent<"span", any> = styled.span`
     order: 2;
     font-weight: 600;

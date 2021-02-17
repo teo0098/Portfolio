@@ -1,8 +1,12 @@
 import Fade from 'react-reveal/Fade'
 
+import StyledAbilityAnimation from '../../../styled-components/styledAbilityAnimation'
+
 const AbilityAnimation : React.FC = ({ children }) => (
     <Fade bottom friction={1}>
-        {children}
+        <StyledAbilityAnimation>
+            {children}
+        </StyledAbilityAnimation>
     </Fade>
 )
 

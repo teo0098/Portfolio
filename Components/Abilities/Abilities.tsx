@@ -1,3 +1,5 @@
+import Fade from 'react-reveal/Fade'
+
 import * as SC from '../../styled-components/styledAbilities'
 import Desc from '../Desc/Desc'
 import HTML from '../../assets/html-5.svg'
@@ -28,111 +30,113 @@ import CHARACTER_2 from '../../assets/character_2.svg'
 
 const Abilities : React.FC = () => (
     <SC.StyledAbilities id='Abilities'>
-        <SC.StyledSVGCharacter>
-            <CHARACTER_2 />
-        </SC.StyledSVGCharacter>
+        <Fade left friction={0.8}>
+            <SC.StyledSVGCharacter>
+                <CHARACTER_2 />
+            </SC.StyledSVGCharacter>
+        </Fade>
         <SC.StyledAbilitiesWrapper>
             <Desc heading='Abilities'>
                 Abilities listed below have taken me some time to assimilate and to be honest I'm still learning and practising them.
                 These abilities have been learnt during making my own projects or performing some programming assignments. 
             </Desc>
             <SC.StyledUL>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> HTML 5 </SC.StyledSpan> <SC.StyledSVG> <HTML /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> CSS 3 </SC.StyledSpan> <SC.StyledSVG> <CSS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> SASS/SCSS </SC.StyledSpan> <SC.StyledSVG> <SASS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Styled Components </SC.StyledSpan> <SC.StyledSVG> <STYLED_COMPONENTS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> JavaScript </SC.StyledSpan> <SC.StyledSVG> <JS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> TypeScript </SC.StyledSpan> <SC.StyledSVG> <TS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> React </SC.StyledSpan> <SC.StyledSVG> <REACT /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> React Spring </SC.StyledSpan> <SC.StyledSVG> <REACT_SPRING /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Framer Motion </SC.StyledSpan> <SC.StyledSVG> <FRAMER_MOTION /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Material UI </SC.StyledSpan> <SC.StyledSVG> <MATERIAL_UI /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Redux </SC.StyledSpan> <SC.StyledSVG> <REDUX /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Node.js </SC.StyledSpan> <SC.StyledSVG> <NODE /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Express.js </SC.StyledSpan> <SC.StyledSVG> <EXPRESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> MongoDB </SC.StyledSpan> <SC.StyledSVG> <MONGO /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Json Web Tokens </SC.StyledSpan> <SC.StyledSVG> <JWT /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> PHP </SC.StyledSpan> <SC.StyledSVG> <PHP /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> MySQL </SC.StyledSpan> <SC.StyledSVG> <MYSQL /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Apollo Client </SC.StyledSpan> <SC.StyledSVG> <APOLLO /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> GraphQL </SC.StyledSpan> <SC.StyledSVG> <GRAPHQL /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Next.js </SC.StyledSpan> <SC.StyledSVG> <NEXTJS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Cypress </SC.StyledSpan> <SC.StyledSVG> <CYPRESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Git </SC.StyledSpan> <SC.StyledSVG> <GIT /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Mobile First Design </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> BEM </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> CSS Modules </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Redux Persist </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Redux Thunk </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Mongoose </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> REST API </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Final Form </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> React Hook Form </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
-                <AbilityAnimation>
-                    <SC.StyledLI> <SC.StyledSpan> Axios </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </SC.StyledLI>
-                </AbilityAnimation>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> HTML 5 </SC.StyledSpan> <SC.StyledSVG> <HTML /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> CSS 3 </SC.StyledSpan> <SC.StyledSVG> <CSS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> SASS/SCSS </SC.StyledSpan> <SC.StyledSVG> <SASS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Styled Components </SC.StyledSpan> <SC.StyledSVG> <STYLED_COMPONENTS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> JavaScript </SC.StyledSpan> <SC.StyledSVG> <JS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> TypeScript </SC.StyledSpan> <SC.StyledSVG> <TS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> React </SC.StyledSpan> <SC.StyledSVG> <REACT /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> React Spring </SC.StyledSpan> <SC.StyledSVG> <REACT_SPRING /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Framer Motion </SC.StyledSpan> <SC.StyledSVG> <FRAMER_MOTION /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Material UI </SC.StyledSpan> <SC.StyledSVG> <MATERIAL_UI /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Redux </SC.StyledSpan> <SC.StyledSVG> <REDUX /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Node.js </SC.StyledSpan> <SC.StyledSVG> <NODE /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Express.js </SC.StyledSpan> <SC.StyledSVG> <EXPRESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> MongoDB </SC.StyledSpan> <SC.StyledSVG> <MONGO /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Json Web Tokens </SC.StyledSpan> <SC.StyledSVG> <JWT /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> PHP </SC.StyledSpan> <SC.StyledSVG> <PHP /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> MySQL </SC.StyledSpan> <SC.StyledSVG> <MYSQL /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Apollo Client </SC.StyledSpan> <SC.StyledSVG> <APOLLO /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> GraphQL </SC.StyledSpan> <SC.StyledSVG> <GRAPHQL /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Next.js </SC.StyledSpan> <SC.StyledSVG> <NEXTJS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Cypress </SC.StyledSpan> <SC.StyledSVG> <CYPRESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Git </SC.StyledSpan> <SC.StyledSVG> <GIT /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Mobile First Design </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> BEM </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> CSS Modules </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Redux Persist </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Redux Thunk </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Mongoose </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> REST API </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Final Form </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> React Hook Form </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
+                <li>
+                    <AbilityAnimation> <SC.StyledSpan> Axios </SC.StyledSpan> <SC.StyledSVG> <SUCCESS /> </SC.StyledSVG> </AbilityAnimation>
+                </li>
             </SC.StyledUL>
         </SC.StyledAbilitiesWrapper>
     </SC.StyledAbilities>

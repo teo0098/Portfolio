@@ -21,12 +21,14 @@ const Project : React.FC<ProjectInterface> = ({ imageSrc, heading, desc, technol
             </SC.StyledSection>
             <SC.StyledTechnologies>
                 {technologies.map(({ icon, name, size }) => (
-                    <Fade key={name} bottom friction={1}>
-                        <SC.StyledTechnology size={size}>
-                            {icon}
-                            <SC.StyledSpan> {name} </SC.StyledSpan>
-                        </SC.StyledTechnology>
-                    </Fade>
+                    <li key={name}>
+                        <Fade bottom friction={1}>
+                            <SC.StyledTechnology size={size}>
+                                {icon}
+                                <SC.StyledSpan> {name} </SC.StyledSpan>
+                            </SC.StyledTechnology>
+                        </Fade>
+                    </li>
                 ))}
             </SC.StyledTechnologies>
             <SC.StyledButtons>

@@ -39,13 +39,22 @@ export const StyledScrollLink = styled(Link)`
         height: 3px;
         border-radius: 5px;
         background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
-        transition: all 300ms ease-out;
+        transition: all 200ms ease-out;
     }
 
-    &.active {
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
+        :hover {
+            &::after {
+                content: '';
+                width: 100%;
+            } 
+        }
+    }
+
+    &.activeLink {
         &::after {
             content: '';
-            width: 100%;;
+            width: 100%;
         }
     }
 `

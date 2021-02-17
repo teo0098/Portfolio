@@ -1,7 +1,14 @@
-import styled, { StyledComponent } from 'styled-components'
+import styled, { StyledComponent, css } from 'styled-components'
 import { motion } from 'framer-motion'
 
 import ThemeInterface from '../interfaces/themeInterface'
+
+const sharedStyles = css`
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+`
 
 export const StyledHamburgerWrapper : StyledComponent<"div", any> = styled.div`
     width: 60px;
@@ -17,10 +24,7 @@ export const StyledHamburgerWrapper : StyledComponent<"div", any> = styled.div`
 interface StyledCircleProps { menu : boolean }
 
 export const StyledCircle : StyledComponent<"div", any, StyledCircleProps> = styled.div<StyledCircleProps>`
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
+    ${sharedStyles};
     background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.orange};
     width: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? `200%` : `${theme.heights.navigation}`};
     height: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? '120vh' : `calc(${theme.heights.navigation} + 30px)`};
@@ -84,10 +88,16 @@ export const StyledLogoWrapper = styled(motion.div)`
     padding: 15px 10px;
 `
 
-export const StyledMenuWrapper = styled.div`
+export const StyledMenuWrapper : StyledComponent<"div", any> = styled.div`
     position: absolute;
     top: ${({ theme } : { theme : ThemeInterface }) => `calc(${theme.heights.navigation} + 30px)`};
     padding-bottom: 10px;
     left: 0;
     width: 100%;
+`
+
+export const StyledShadow : StyledComponent<"div", any> = styled.div`
+    ${sharedStyles};
+    width: 100%;
+    filter: ${({ theme } : { theme : ThemeInterface }) =>  `drop-shadow(-1px 1px 2px ${theme.colors.dark})`};
 `
