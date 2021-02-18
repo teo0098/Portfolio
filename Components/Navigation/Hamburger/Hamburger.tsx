@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 import * as SC from '../../../styled-components/styledHamburger'
@@ -35,4 +35,4 @@ const Hamburger : React.FC = () => {
     )
 } 
 
-export default Hamburger
+export default memo(Hamburger)

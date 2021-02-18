@@ -2,6 +2,7 @@ import Fade from 'react-reveal/Fade'
 
 import ProjectInterface from '../../../interfaces/projectInterface'
 import * as SC from '../../../styled-components/styledProject'
+import Technologies from './Technologies/Technologies'
 
 const Project : React.FC<ProjectInterface> = ({ imageSrc, heading, desc, technologies, previewUrl, codeUrl, index, smallImageSrc }) => (
     <SC.StyledProject index={index}>
@@ -19,18 +20,7 @@ const Project : React.FC<ProjectInterface> = ({ imageSrc, heading, desc, technol
                     <SC.StyledDesc> {desc} </SC.StyledDesc>
                 </Fade>
             </SC.StyledSection>
-            <SC.StyledTechnologies>
-                {technologies.map(({ icon, name, size }) => (
-                    <li key={name}>
-                        <Fade bottom friction={1}>
-                            <SC.StyledTechnology size={size}>
-                                {icon}
-                                <SC.StyledSpan> {name} </SC.StyledSpan>
-                            </SC.StyledTechnology>
-                        </Fade>
-                    </li>
-                ))}
-            </SC.StyledTechnologies>
+            <Technologies technologies={technologies} />
             <SC.StyledButtons>
                 <SC.StyledButton as='a' href={previewUrl} target='_blank' rel="noopener"> Project's preview </SC.StyledButton>
                 <SC.StyledButton as='a' href={codeUrl} target='_blank' rel="noopener"> Project's code </SC.StyledButton>

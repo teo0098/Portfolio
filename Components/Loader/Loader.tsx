@@ -1,7 +1,9 @@
+import { memo } from 'react'
+
 import StyledLoader from '../../styled-components/styledLoader'
 
 const Loader : React.FC = () => (
     <StyledLoader></StyledLoader>
 )
 
-export default Loader
+export default memo(Loader)

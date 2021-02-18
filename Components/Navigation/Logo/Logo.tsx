@@ -1,3 +1,5 @@
+import { memo } from 'react'
+
 import * as SC from '../../../styled-components/styledLogo'
 
 const Logo : React.FC = () => (
@@ -7,4 +9,4 @@ const Logo : React.FC = () => (
     </SC.StyledSection>
 )
 
-export default Logo
+export default memo(Logo)

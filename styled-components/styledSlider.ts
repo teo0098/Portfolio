@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 import ThemeInterface from '../interfaces/themeInterface'
 
-export const StyledSlider : StyledComponent<"section", any> = styled.section`
+export const StyledSlider : StyledComponent<"div", any> = styled.div`
     background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
     border-radius: 3px;
     padding: 10px;

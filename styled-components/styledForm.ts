@@ -3,10 +3,6 @@ import styled, { StyledComponent, css } from 'styled-components'
 import ThemeInterface from '../interfaces/themeInterface'
 import Theme from '../styles/theme'
 
-export const StyledFormWrapper : StyledComponent<"div", any> = styled.div`
-    
-`
-
 export const StyledForm : StyledComponent<"form", any> = styled.form`
     color: ${({ theme } : {theme : ThemeInterface}) => theme.colors.dark};
     display: grid;

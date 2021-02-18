@@ -1,4 +1,5 @@
 import { AnimatePresence } from 'framer-motion'
+import { memo } from 'react'
 
 import MenuInterface from '../../../interfaces/menuInterface'
 import * as SC from '../../../styled-components/styledMenu'
@@ -56,4 +57,4 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
     )
 }
 
-export default Menu
+export default memo(Menu)

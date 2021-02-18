@@ -40,19 +40,17 @@ const Form : React.FC = () => {
     }
 
     return (
-        <SC.StyledFormWrapper>
-            <FinalForm onSubmit={handleOnSubmit} decorators={[focusOnErrorDecorator]}>
-                {({ handleSubmit }) =>
-                    <SC.StyledForm onSubmit={handleSubmit}>
-                        <Name />
-                        <Email />
-                        <Message />
-                        {renderStatus()}
-                        <StyledButton type='submit'>Send</StyledButton>
-                    </SC.StyledForm>
-                }
-            </FinalForm>
-        </SC.StyledFormWrapper>
+        <FinalForm onSubmit={handleOnSubmit} decorators={[focusOnErrorDecorator]}>
+            {({ handleSubmit }) =>
+                <SC.StyledForm onSubmit={handleSubmit}>
+                    <Name />
+                    <Email />
+                    <Message />
+                    {renderStatus()}
+                    <StyledButton type='submit'>Send</StyledButton>
+                </SC.StyledForm>
+            }
+        </FinalForm>
     )
 }
 
