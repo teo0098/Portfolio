@@ -14,6 +14,9 @@ export const StyledTechnologies : StyledComponent<"ul", any> = styled.ul`
         margin: 0;
     }
 
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.handWatches} {
+        grid-template-columns: 100%;
+    }
 `
 interface StyledTechnologyProps { size : string }
 

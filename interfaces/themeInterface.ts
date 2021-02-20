@@ -19,5 +19,7 @@ export default interface ThemeInterface {
         laptop: string;
         desktop: string;
         tablet: string;
+        smallDevices: string;
+        handWatches: string;
     };
 }

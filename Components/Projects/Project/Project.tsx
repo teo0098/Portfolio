@@ -8,6 +8,7 @@ const Project : React.FC<ProjectInterface> = ({ imageSrc, heading, desc, technol
     <SC.StyledProject index={index}>
         <picture>
             <source srcSet={smallImageSrc} media="(min-width: 1024px)" />
+            <source srcSet={smallImageSrc} media="(max-width: 500px)" />
             <source srcSet={imageSrc} />
             <SC.StyledImg index={index} src={imageSrc} alt={heading} />
         </picture>

@@ -32,4 +32,8 @@ export const StyledMessage : StyledComponent<"p", any> = styled.p`
 
 export const StyledAdditionalData : StyledComponent<"span", any> = styled.span`
     font-weight: 700;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.smallDevices} {
+        word-break: break-word;
+    }
 `

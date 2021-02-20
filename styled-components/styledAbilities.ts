@@ -43,6 +43,10 @@ export const StyledUL : StyledComponent<"ul", any> = styled.ul`
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: center;
+
+    ${({ theme } : { theme : ThemeInterface }) => theme.media.handWatches} {
+        grid-template-columns: 100%;
+    }
 `
 
 export const StyledSpan : StyledComponent<"span", any> = styled.span`

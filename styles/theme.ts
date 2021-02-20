@@ -20,7 +20,9 @@ const Theme : ThemeInterface = {
     media: {
         laptop: '@media (min-width: 1200px)',
         desktop: '@media (min-width: 1024px)',
-        tablet: '@media (min-width: 728px)'
+        tablet: '@media (min-width: 728px)',
+        smallDevices: '@media (max-width: 350px)',
+        handWatches: '@media (max-width: 270px)'
     }
 }
 
