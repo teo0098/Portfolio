@@ -2,7 +2,7 @@ import { AnimatePresence } from 'framer-motion'
 import { memo } from 'react'
 
 import MenuInterface from '../../../interfaces/menuInterface'
-import * as SC from '../../../styled-components/styledMenu'
+import * as SC from '../../../styled-components/styledNavMenu'
 import useMenu from '../../customHooks/useMenu'
 import { ulVariant, liVariant } from './animationVariants'
 
