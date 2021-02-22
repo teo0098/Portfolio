@@ -52,11 +52,22 @@ export const StyledButton : StyledComponent<"button", any> = styled.button`
     font-weight: 700;
     border: ${({ theme } : { theme : ThemeInterface }) => `1px solid ${theme.colors.dark}`};
     background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.light};
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: ${({ theme } : { theme : ThemeInterface }) => `0 8px 6px -6px ${theme.colors.dark}`};
     font-size: 17px;
+    transition: all 50ms linear;
+
+    :nth-child(1) {
+        background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.dark};
+        color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.light};
+    }
 
     ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
         padding: 15px;
+
+        :hover {
+            transform: scale(0.95);
+            box-shadow: ${({ theme } : { theme : ThemeInterface }) => `0 16px 12px -12px ${theme.colors.dark}`};
+        }
     }
 `
 
