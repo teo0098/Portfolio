@@ -1,5 +1,3 @@
-import Fade from 'react-reveal/Fade'
-
 import * as SC from '../../styled-components/styledProjects'
 import Desc from '../Desc/Desc'
 import projectsData from './projectsData'
@@ -12,9 +10,7 @@ const Projects : React.FC = () => (
         </Desc>
         <SC.StyledProjectsWrapper>
             {projectsData.map(({ imageSrc, heading, desc, previewUrl, codeUrl, technologies, smallImageSrc }, index : number) => (
-                <Fade friction={0.8} key={heading}>
-                    <Project smallImageSrc={smallImageSrc} index={index} imageSrc={imageSrc} heading={heading} desc={desc} previewUrl={previewUrl} codeUrl={codeUrl} technologies={technologies} />
-                </Fade>              
+                <Project key={heading} smallImageSrc={smallImageSrc} index={index} imageSrc={imageSrc} heading={heading} desc={desc} previewUrl={previewUrl} codeUrl={codeUrl} technologies={technologies} />             
             ))}
         </SC.StyledProjectsWrapper>
     </SC.StyledProjects>
