@@ -12,7 +12,8 @@ export const MyApp : React.FC<{ Component : React.FC, pageProps : any }> = ({ Co
         <meta name="Description" content="Teodor Tkaczyk - Fronted Developer. Let's make a brilliant website together!" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Kalam&display=swap" rel="stylesheet" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Kalam&display=swap" as="style" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Kalam&display=swap" />
         <link rel="manifest" href="/manifest.json" />
     </Head>
     <ThemeProvider theme={Theme}>
