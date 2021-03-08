@@ -25,7 +25,7 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
                                     to={link}
                                     smooth={true}
                                     offset={-90}
-                                    delay={1200}
+                                    delay={1000}
                                     duration={1000}>
                                         {link}
                                 </SC.StyledScrollLink>

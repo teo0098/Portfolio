@@ -9,7 +9,7 @@ export const ulVariant = {
     visible: {
         transition: {
             type: 'tween',
-            delayChildren: 0.5,
+            delayChildren: 0.3,
             staggerChildren: 0.1
         }
     }

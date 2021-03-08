@@ -26,11 +26,11 @@ interface StyledCircleProps { menu : boolean }
 export const StyledCircle : StyledComponent<"div", any, StyledCircleProps> = styled.div<StyledCircleProps>`
     ${sharedStyles};
     background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.orange};
-    width: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? `200%` : `${theme.heights.navigation}`};
-    height: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? '120vh' : `calc(${theme.heights.navigation} + 30px)`};
-    clip-path: ellipse(100% 100% at 100% 0%);
+    width: 100%;
+    height: 100vh;
+    clip-path: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? `ellipse(1000px 1000px at 100% 0%)` : `ellipse(${theme.heights.navigation} 120px at 100% 0%)`};
     transition: all 500ms ease-out;
-    transition-delay: ${({ menu }) => menu ? '0' : '700ms'};
+    transition-delay: ${({ menu }) => menu ? '0' : '500ms'};
     display: flex;
     justify-content: flex-end;
 
