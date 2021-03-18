@@ -3,15 +3,15 @@ const logoVariants = {
         opacity: 0,
         transition: {
             type: 'tween',
-            delay: 1.2,
-            duration: 0
+            duration: 0.3,
         }
     },
     visible: {
         opacity: 1,
         transition: {
             type: 'tween',
-            duration: 0
+            duration: 0.3,
+            delay: 0.3,
         }
     }
 }

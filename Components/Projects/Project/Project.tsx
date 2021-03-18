@@ -16,10 +16,10 @@ const Project : React.FC<ProjectInterface> = ({ imageSrc, heading, desc, technol
         </Fade>
         <SC.StyledInfoWrapper>
             <SC.StyledSection>
-                <Fade bottom friction={0.8}>
+                <Fade friction={0.8}>
                     <SC.StyledH3> {heading} </SC.StyledH3>
                 </Fade>
-                <Fade bottom friction={0.8}>
+                <Fade friction={0.8}>
                     <SC.StyledDesc> {desc} </SC.StyledDesc>
                 </Fade>
             </SC.StyledSection>

@@ -25,14 +25,23 @@ interface StyledCircleProps { menu : boolean }
 
 export const StyledCircle : StyledComponent<"div", any, StyledCircleProps> = styled.div<StyledCircleProps>`
     ${sharedStyles};
-    background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.orange};
-    width: 100%;
-    height: 100vh;
-    clip-path: ${({ theme, menu } : { theme : ThemeInterface, menu : boolean }) => menu ? `ellipse(1000px 1000px at 100% 0%)` : `ellipse(${theme.heights.navigation} 120px at 100% 0%)`};
-    transition: all 500ms ease-out;
-    transition-delay: ${({ menu }) => menu ? '0' : '500ms'};
     display: flex;
     justify-content: flex-end;
+
+    ::after {
+        content: '';
+        width: 1000px;
+        height: 1000px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: -1000;
+        transition: all 500ms ease-out;
+        transition-delay: ${({ menu }) => menu ? '0' : '500ms'};
+        background-color: ${({ theme } : { theme : ThemeInterface }) => theme.colors.orange};
+        transform: ${({ menu }) => menu ? 'translate(0, 0)' : 'translate(900px, -840px)'};
+        border-bottom-left-radius: 20%;
+    }
 
     ${({ theme } : { theme : ThemeInterface }) => theme.media.tablet} {
         display: none;
