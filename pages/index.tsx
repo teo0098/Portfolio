@@ -1,9 +1,22 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const Abilities = dynamic(
+  () => import('../Components/Abilities/Abilities'),
+  { loading: () => <p style={{textAlign: 'center'}}>Loading...</p> }
+)
+
+const Contact = dynamic(
+  () => import('../Components/Contact/Contact'),
+  { loading: () => <p style={{textAlign: 'center'}}>Loading...</p> }
+)
+
+const Projects = dynamic(
+  () => import('../Components/Projects/Projects'),
+  { loading: () => <p style={{textAlign: 'center'}}>Loading...</p> }
+)
 
 import Intro from '../Components/Intro/Intro'
-import Abilities from '../Components/Abilities/Abilities'
-import Projects from '../Components/Projects/Projects'
-import Contact from '../Components/Contact/Contact'
 
 const Home : React.FC = () => (
     <>
