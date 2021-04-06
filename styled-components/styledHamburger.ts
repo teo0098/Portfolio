@@ -25,8 +25,6 @@ interface StyledCircleProps { menu : boolean }
 
 export const StyledCircle : StyledComponent<"div", any, StyledCircleProps> = styled.div<StyledCircleProps>`
     ${sharedStyles};
-    display: flex;
-    justify-content: flex-end;
 
     ::after {
         content: '';
