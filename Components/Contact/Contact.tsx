@@ -4,7 +4,7 @@ import Form from './Form/Form'
 import OtherContacts from './OtherContacts/OtherContacts'
 
 const Contact : React.FC = () => (
-    <SC.StyledContact id='Contact'>
+    <SC.StyledContact id='Contact' className='scroll__point' data-index='3'>
         <Desc heading='Contact'>
             Do you have any doubts or questions or maybe you are interested in cooperation with me? Do not hesitate and contact me.
         </Desc>

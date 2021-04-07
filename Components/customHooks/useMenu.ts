@@ -4,17 +4,19 @@ const useMenu = () => {
 
     const [active, setActive] = useState<number>(0)
 
-    const animateOnScroll = () => {
-        if (window.pageYOffset >= (document.getElementById('Home')?.offsetTop as number) - 200) setActive(0)
-        if (window.pageYOffset >= (document.getElementById('Abilities')?.offsetTop as number) - 200) setActive(1)
-        if (window.pageYOffset >= (document.getElementById('Projects')?.offsetTop as number) - 200) setActive(2)
-        if (window.pageYOffset >= (document.getElementById('Contact')?.offsetTop as number) - 200) setActive(3)
-    }
-
     useEffect(() => {
-        window.addEventListener('scroll', animateOnScroll)
-        return () => window.removeEventListener('scroll', animateOnScroll)
-    }, [])
+        const targets : NodeListOf<Element> = document.querySelectorAll('.scroll__point')
+        const io = new IntersectionObserver((entries : IntersectionObserverEntry[]) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const entryIndex : number = Number(entry.target.getAttribute('data-index'))
+                    setActive(entryIndex)
+                }
+            })
+        }, { rootMargin: '-50%' })
+        targets.forEach(target => io.observe(target))
+        return () => targets.forEach(target => io.unobserve(target))
+    }, [active])
 
     return { active }
 }

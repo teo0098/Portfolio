@@ -21,7 +21,7 @@ const Menu : React.FC<MenuInterface> = ({ setMenu, mobile }) => {
                             onClick={() => setMenu ? setMenu(false) : null}
                             to={link}
                             smooth={true}
-                            offset={-90}
+                            offset={index === 0 ? -90 : -20}
                             delay={1000}
                             duration={1000}>
                                 {link}
@@ -41,7 +41,7 @@ const Menu : React.FC<MenuInterface> = ({ setMenu, mobile }) => {
                             className={active === index ? 'activeLink' : ''}
                             to={link}
                             smooth={true}
-                            offset={-90}
+                            offset={-100}
                             duration={1000}>
                                 {link}
                         </SC.StyledScrollLink>

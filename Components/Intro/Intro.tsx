@@ -4,8 +4,8 @@ import Slider from './Slider/Slider'
 import CHARACTER_1 from '../../assets/character_1.svg'
 
 const Intro : React.FC = () => (
-    <SC.StyledIntroWrapper>
-        <SC.StyledIntro id='Home'>
+    <SC.StyledIntroWrapper id='Home' className='scroll__point' data-index='0'>
+        <SC.StyledIntro>
             <SC.StyledName>Teodor<br/>Tkaczyk</SC.StyledName>
             <Slider />
             <SC.StyledP>Frontend Developer</SC.StyledP>
