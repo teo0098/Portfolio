@@ -337,7 +337,7 @@ const projectsData : Array<ProjectInterface> = [
                 size: successSize
             }
         ],
-        previewUrl: 'https://jobs-find.vercel.app/',
+        previewUrl: 'https://jobsfind.vercel.app/',
         codeUrl: 'https://github.com/teo0098/Jobs.find'
     }
 ]
