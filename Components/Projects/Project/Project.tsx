@@ -1,4 +1,5 @@
 import Fade from 'react-reveal/Fade'
+import Lazyload from 'react-lazyload'
 
 import ProjectInterface from '../../../interfaces/projectInterface'
 import * as SC from '../../../styled-components/styledProject'
@@ -7,12 +8,14 @@ import Technologies from './Technologies/Technologies'
 const Project : React.FC<ProjectInterface> = ({ imageSrc, heading, desc, technologies, previewUrl, codeUrl, index, smallImageSrc }) => (
     <SC.StyledProject index={index}>
         <Fade friction={0.8}>
-            <picture>
-                <source srcSet={smallImageSrc} media="(min-width: 1024px)" />
-                <source srcSet={smallImageSrc} media="(max-width: 500px)" />
-                <source srcSet={imageSrc} />
-                <SC.StyledImg index={index} src={imageSrc} alt={heading} />
-            </picture>
+            <Lazyload>
+                <picture>
+                    <source srcSet={smallImageSrc} media="(min-width: 1024px)" />
+                    <source srcSet={smallImageSrc} media="(max-width: 500px)" />
+                    <source srcSet={imageSrc} />
+                    <SC.StyledImg index={index} src={imageSrc} alt={heading} />
+                </picture>
+            </Lazyload>
         </Fade>
         <SC.StyledInfoWrapper>
             <SC.StyledSection>

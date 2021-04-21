@@ -18,18 +18,18 @@ const Hamburger : React.FC = () => {
                     <SC.StyledHamburgerDash item={2} menu={menu}></SC.StyledHamburgerDash>
                     <SC.StyledHamburgerDash item={3} menu={menu}></SC.StyledHamburgerDash>
                 </SC.StyledHamburgerWrapper>
-                <SC.StyledWrapper>
-                    <AnimatePresence>
-                        {menu && (
+                <AnimatePresence>
+                    {menu && (
+                        <SC.StyledWrapper>
                             <SC.StyledLogoWrapper key='menu' variants={logoVariants} initial='hidden' animate='visible' exit='hidden'>
                                 <Logo />
                             </SC.StyledLogoWrapper>
-                        )}
-                    </AnimatePresence>
-                    <SC.StyledMenuWrapper>
-                        <Menu mobile menu={menu} setMenu={setMenu} />
-                    </SC.StyledMenuWrapper>
-                </SC.StyledWrapper>
+                            <SC.StyledMenuWrapper>
+                                <Menu mobile setMenu={setMenu} />
+                            </SC.StyledMenuWrapper>
+                        </SC.StyledWrapper>
+                    )}
+                </AnimatePresence>
             </SC.StyledCircle>
         </SC.StyledShadow>
     )

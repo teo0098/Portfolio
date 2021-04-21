@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion'
 import { memo } from 'react'
 
 import MenuInterface from '../../../interfaces/menuInterface'
@@ -8,32 +7,28 @@ import { ulVariant, liVariant } from './animationVariants'
 
 const links : Array<string> = ['Home', 'Abilities', 'Projects', 'Contact']
 
-const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
+const Menu : React.FC<MenuInterface> = ({ setMenu, mobile }) => {
 
     const { active } = useMenu()
 
     if (mobile) return (
         <nav>
-            <AnimatePresence>
-                {menu && (
-                    <SC.StyledUL key='ul' variants={ulVariant} initial='hidden' animate='visible' exit='hidden'>
-                        {links.map((link, index : number) => (
-                            <SC.StyledLI key={link} variants={liVariant}>
-                                <SC.StyledScrollLink
-                                    className={active === index ? 'activeLink' : ''}
-                                    onClick={() => setMenu ? setMenu(false) : null}
-                                    to={link}
-                                    smooth={true}
-                                    offset={-90}
-                                    delay={1000}
-                                    duration={1000}>
-                                        {link}
-                                </SC.StyledScrollLink>
-                            </SC.StyledLI>
-                        ))}
-                    </SC.StyledUL>
-                )}
-            </AnimatePresence>
+            <SC.StyledUL key='ul' variants={ulVariant} initial='hidden' animate='visible' exit='hidden'>
+                {links.map((link, index : number) => (
+                    <SC.StyledLI key={link} variants={liVariant}>
+                        <SC.StyledScrollLink
+                            className={active === index ? 'activeLink' : ''}
+                            onClick={() => setMenu ? setMenu(false) : null}
+                            to={link}
+                            smooth={true}
+                            offset={index === 0 ? -90 : -20}
+                            delay={1000}
+                            duration={1000}>
+                                {link}
+                        </SC.StyledScrollLink>
+                    </SC.StyledLI>
+                ))}
+            </SC.StyledUL>
         </nav>
     )
 
@@ -46,7 +41,7 @@ const Menu : React.FC<MenuInterface> = ({ menu, setMenu, mobile }) => {
                             className={active === index ? 'activeLink' : ''}
                             to={link}
                             smooth={true}
-                            offset={-90}
+                            offset={-100}
                             duration={1000}>
                                 {link}
                         </SC.StyledScrollLink>

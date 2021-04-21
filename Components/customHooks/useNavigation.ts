@@ -5,15 +5,11 @@ const useNavigation = () => {
     const [scrolled, setScrolled] = useState<boolean>(false)
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset !== undefined) {
-                if (window.pageYOffset >= 50) setScrolled(true)
-                else setScrolled(false)
-            } 
-            else {
-               setScrolled(true)
-            }
+        const io = new IntersectionObserver((entries : IntersectionObserverEntry[]) => {
+            if(entries[0].boundingClientRect.y < 0) setScrolled(true)
+            else setScrolled(false)
         })
+        io.observe(document.getElementById('navigation__point')!)
     }, [scrolled])
 
     return { scrolled }

@@ -44,3 +44,12 @@ export const StyledMenuWrapper : StyledComponent<"div", any> = styled.div`
         display: block;    
     }
 `  
+
+export const StyledPoint : StyledComponent<"div", any> = styled.div`
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 30px;
+    left: 0;
+    background-color: transparent;
+`

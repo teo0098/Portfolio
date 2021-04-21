@@ -29,7 +29,7 @@ import AbilityAnimation from './AbilityAnimation/AbilityAnimation'
 import CHARACTER_2 from '../../assets/character_2.svg'
 
 const Abilities : React.FC = () => (
-    <SC.StyledAbilities id='Abilities'>
+    <SC.StyledAbilities id='Abilities' className='scroll__point' data-index='1'>
         <Fade left friction={0.8}>
             <SC.StyledSVGCharacter>
                 <CHARACTER_2 />
