@@ -1,3 +1,3 @@
 <h1>My personal website</h1>
 <hr>
-<a href="https://jobs-find.vercel.app/">Preview</a>
+<a href="https://www.teodor-tkaczyk.com/">Preview</a>
