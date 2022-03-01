@@ -10,7 +10,6 @@ const Project: React.FC<ProjectInterface> = ({
   heading,
   desc,
   technologies,
-  previewUrl,
   codeUrl,
   index,
   smallImageSrc,
