@@ -1,9 +1,9 @@
-import Fade from "react-reveal/Fade";
-import Lazyload from "react-lazyload";
+import Fade from 'react-reveal/Fade';
+import Lazyload from 'react-lazyload';
 
-import ProjectInterface from "../../../interfaces/projectInterface";
-import * as SC from "../../../styled-components/styledProject";
-import Technologies from "./Technologies/Technologies";
+import ProjectInterface from '../../../interfaces/projectInterface';
+import * as SC from '../../../styled-components/styledProject';
+import Technologies from './Technologies/Technologies';
 
 const Project: React.FC<ProjectInterface> = ({
   imageSrc,
@@ -19,8 +19,8 @@ const Project: React.FC<ProjectInterface> = ({
     <Fade friction={0.8}>
       <Lazyload once offset={100}>
         <picture>
-          <source srcSet={smallImageSrc} media="(min-width: 1024px)" />
-          <source srcSet={smallImageSrc} media="(max-width: 500px)" />
+          <source srcSet={smallImageSrc} media='(min-width: 1024px)' />
+          <source srcSet={smallImageSrc} media='(max-width: 500px)' />
           <source srcSet={imageSrc} />
           <SC.StyledImg index={index} src={imageSrc} alt={heading} />
         </picture>
@@ -37,18 +37,9 @@ const Project: React.FC<ProjectInterface> = ({
       </SC.StyledSection>
       <Technologies technologies={technologies} />
       <SC.StyledButtons>
-        <SC.StyledButton
-          as="a"
-          href={previewUrl}
-          target="_blank"
-          rel="noopener"
-        >
-          {" "}
-          Project's preview{" "}
-        </SC.StyledButton>
-        <SC.StyledButton as="a" href={codeUrl} target="_blank" rel="noopener">
-          {" "}
-          Project's code{" "}
+        <SC.StyledButton as='a' href={codeUrl} target='_blank' rel='noopener'>
+          {' '}
+          Project's code{' '}
         </SC.StyledButton>
       </SC.StyledButtons>
     </SC.StyledInfoWrapper>
